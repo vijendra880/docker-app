@@ -1,0 +1,8 @@
+#Start with base image containing java runtime
+FROM openjdk:8-jdk-alpine
+
+#It will copy jar to docker image
+ADD target/docker-app-1.0-SNAPSHOT.jar /docker-app.jar
+
+#Run the jar file
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/docker-app.jar"]

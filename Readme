@@ -1,0 +1,8 @@
+To create image
+docker build -f DockerFile -t docker-app .
+
+To run image
+docker run -p 5000:8080 docker-app
+
+Use localhost:5000/test to test if app is running
+
